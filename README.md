@@ -103,20 +103,22 @@ To replace that code with my name, I would need to put "Sara" in quotations afte
  document.querySelector('h1').innerHTML =.
 ```
 
-
 * **What does the word `document` represent in this code? Explain briefly.**
 
-It refers to the document we're using for this code. Similar to self in a python class.
+It refers to the document we're using for this code. It serves a similar purpose to the word "self" in Python.
 
 * **What is happening in line 12 (
 		`document.querySelector('#items').innerHTML = document.getElementsByTagName('li').length`
 )? Explain, briefly (<= 2 sentences).**
 
-It's assigning to the items id the number of elements that are tagged "li," which means list and then it's counting their number by using .length.
+It's assigning to the "items" id the number of elements that are tagged "li." It does this by using the "getElementsbyTagName" function, which finds all of the elements in the code that are listed between "<li> </li>." It then finds the length of that list of items, which allows us to count the number of items included in lists.
 
 * **What color would the background of this page be <u>if there were no JavaScript in this page</u>?**
 
-The background color would become white.
+The background color would become white. We can check this by commenting out the line:
+```js
+body.style.background = "peachpuff";
+```
 
 * **Why are there a couple of gray boxes on the screen with a different colored border? How could you edit this code to make them a different color? Explain briefly. Then edit the code to make those boxes some shade of blue, of your choosing.**
 
