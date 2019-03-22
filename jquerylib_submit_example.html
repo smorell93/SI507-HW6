@@ -11,13 +11,18 @@
     .good {
         color: blue;
     }
+    .hellohello{
+      color: blue;
+    }
 </style>
 <script type="text/javascript">
 $(document).ready(function(){
     $("form").submit(function(event){
         var regex = /^[a-zA-Z]+$/;
         var currentValue = $("#oneWord").val();
-        if(regex.test(currentValue) == false){
+        if(currentValue == "hello"){
+          $("#result").html('<p class="hellohello">Hello to you too!</p>').show().fadeOut(10000);
+        } else if(regex.test(currentValue) == false){
             $("#result").html('<p class="error">Not valid!</p>').show().fadeOut(10000);
             // Preventing form submission
             event.preventDefault();
@@ -35,6 +40,6 @@ $(document).ready(function(){
         <input type="text" name="first-name" id="oneWord">
         <input type="submit" value="Submit">
         <div id="result"></div>
-    </form>    
+    </form>
 </body>
-</html>                            
+</html>
